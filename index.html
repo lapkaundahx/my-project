@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Днём Святого Валентина!</title>
+
+    <!-- Подключаем Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            font-family: 'Dancing Script', cursive;
+            color: #e60073;
+            animation: textGlow 2s infinite alternate;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        .heart {
+            font-size: 50px;
+            color: red;
+            animation: pulse 1.5s infinite;
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .card, .stats, .facts, .final {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            width: 500px;
+            margin: 20px;
+            text-align: center;
+            animation: slideUp 0.8s ease-in-out;
+        }
+
+        .card {
+            position: relative;
+            z-index: 1;
+        }
+
+        .stats-image-container img, .facts-image-container img {
+            max-width: 150px;
+            height: auto;
+            opacity: 0.9;
+            border-radius: 15px;
+        }
+
+        .image-container {
+            position: absolute;
+            bottom: -30px;
+            right: -20px;
+            width: 100px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .button {
+            padding: 12px 20px;
+            background-color: #ff6699;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ff3385;
+        }
+
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 20px rgba(255, 0, 115, 0.8); }
+            100% { text-shadow: 0 0 40px rgba(255, 0, 115, 1); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="section" id="greeting">
+        <div class="card">
+            <h1>💖 Валентиночка! 💖</h1>
+            <p>💌Моя любимая Соня💕</p>
+            <p>С момента, как ты появилась в моей жизни, каждый день стал особенным</p>
+            <p>Твоя улыбка - мое солнце, твои глаза - мой океан, в котором хочется утонуть</p>
+            <p>Ты делаешь этот мир ярче, а меня - счастливее</p>
+            <p>Особенный повод сказать тебе - ты невероятная! Я ценю каждую минуту с тобой и мечтаю, чтобы их было бесконечно много.</p>
+            <div class="heart">❤️</div>
+            <div class="image-container">
+                <img src="https://th.bing.com/th/id/R.b9a445680b52f80de74d0c67d4d312e5?rik=GvDREDyJvTp9MA&riu=http%3a%2f%2fpngimg.com%2fuploads%2fsnoopy%2fsnoopy_PNG2.png&ehk=kRp1T6vDuHb%2fVMwdgM3A%2bDhIBHTl2UyyDSmB3HIq29g%3d&risl=&pid=ImgRaw&r=0" alt="Snoopy Love">
+            </div>
+            <!-- Кнопка "Дальше" теперь ниже -->
+            <button class="button" onclick="smoothScroll('#stats')">Дальше</button>
+        </div>
+    </div>
+
+    <div class="section" id="stats">
+        <div class="stats">
+            <div class="stats-image-container">
+                <img src="https://th.bing.com/th/id/R.fadb4826c18c603b3f64d5b1eac86007?rik=ij95wdMJbSzkog&pid=ImgRaw&r=0" alt="Love Stats">
+            </div>
+            <h2>Интересные факты о нас</h2>
+            <p>Уже <b>260</b> дней как <b>МЫ</b> вместе</p>
+            <p>Это равно...</p>
+            <p><b>22 464 000</b> секунд</p>
+            <p><b>374 400</b> минут</p>
+            <p>Или же...</p>
+            <p><b>6240</b> часов</p>
+            <p><b>Каждая секунда из которых ощущалась с тобой как рай❤️</b></p>
+            <!-- Переместили кнопки -->
+            <button class="button" onclick="smoothScroll('#greeting')">Назад</button>
+            <button class="button" onclick="smoothScroll('#facts')">Дальше</button>
+        </div>
+    </div>
+
+    <div class="section" id="facts">
+        <div class="facts">
+            <div class="facts-image-container">
+                <img src="https://pngimg.com/uploads/snoopy/snoopy_PNG5.png" alt="Snoopy Love">
+            </div>
+            <h2>За это время...</h2>
+            <p>🌍Земля пролетела <b>более 680 миллионов км</b> вокруг Солнца.</p>
+            <p>🌊В океанах поднялось и опустилось <b>около 780 приливов и отливов</b>.</p>
+            <p>🐢Морская черепаха могла бы переплыть <b>почти 10 000 км</b> в поисках нового дома.</p>
+            <p>🚀Международная космическая станция облетела Землю <b>37 440 раз</b>!</p>
+            <p>🦋Одна бабочка могла бы прожить целую жизнь <b>10 раз</b>.</p>
+            <p>🍕В Италии испекли <b>более 2,5 миллиардов</b> пицц!</p>
+            <button class="button" onclick="smoothScroll('#stats')">Назад</button>
+            <button class="button" onclick="smoothScroll('#final')">Дальше</button>
+        </div>
+    </div>
+
+    <div class="section" id="final">
+        <div class="final">
+            <h2>Ты – моё всё! ❤️</h2>
+            <p>Спасибо за каждую секунду, за каждый момент</p>
+            <p>Ты - самое лучшее, что со мной случилось</p>
+            <p>Пусть наша история продолжается вечно, и каждый день будет наполнен любовью и счастьем!</p>
+            <p>Я люблю тебя! 💖</p>
+            <button class="button" onclick="smoothScroll('#greeting')">В начало</button>
+        </div>
+    </div>
+
+    <script>
+        function smoothScroll(targetId) {
+            const targetElement = document.querySelector(targetId);
+            window.scrollTo({
+                top: targetElement.offsetTop, // Скроллим до верхней позиции элемента
+                behavior: 'smooth' // Плавное прокручивание
+            });
+        }
+    </script>
+</body>
+</html>
